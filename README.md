@@ -10,6 +10,8 @@
 ### License
 [GNU General Public License v3.0](https://github.com/Weverses/FixNFC/blob/main/LICENSE)
 
+**请在使用本方案后,标明原作者Weverse或该开源仓库的地址**
+
 ### 使用方法:
 1.将`*.so`,`/system/system_ext/app/NQNfcNci/*`,`/system/system_ext/framework/*`和`/system/system/framework/com.nxp.nfc.nq.jar及oat里的odex和vdex`文件全部替换为原机型的
 
