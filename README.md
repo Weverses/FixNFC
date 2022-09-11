@@ -8,7 +8,7 @@
 
 
 ### License
-[GNU General Public License v3.0](https://github.com/YifePlayte/MaxFreeForm/blob/main/LICENSE)
+[GNU General Public License v3.0](https://github.com/Weverses/FixNFC/blob/main/LICENSE)
 
 ### 使用方法:
 1.将`*.so`,`/system/system_ext/app/NQNfcNci/*`,`/system/system_ext/framework/*`和`/system/system/framework/com.nxp.nfc.nq.jar及oat里的odex和vdex`文件全部替换为原机型的
@@ -16,3 +16,8 @@
 2.根据`framework_patch`自行修补`framework.jar`，并使用`dex2oat.sh`进行odex处理，并将获得的文件替换到对应目录
 
 3.如果遇到反复重启进Recovery的问题请`su -c setprop persist.sys.disable_rescue ture`关闭Android救援模式，然后正常启动后自行使用`logcat`抓取NFC服务的crash log
+
+### 已知问题(如果有修复方法,非常欢迎提交PR!)：
+1.NFC读卡功能不可用，原因由于`setTagUpToDate`的`cookie`在Android12的NFC服务里没有
+
+2.可能会导致设置->连接与共享界面崩溃，原因未知，可以通过双清解决
